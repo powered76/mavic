@@ -1,0 +1,123 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    right: 0;
+    z-index: 10;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 17px;
+        @extend %ub-medium;
+    }
+
+    &__btn {
+        color: #fff;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+
+    }
+
+    &__phone {
+        font-size: 16px;
+        margin-right: 8px;
+        line-height: 18px;
+        @extend %ub-bold;
+    }
+}
+
+.menu {
+    &__list-item {
+        display: inline-block;
+    }
+    li + li {
+        padding-left: 20px;
+    }
+}
+
+.top {
+    background-image: url('../images/top-bg.jpg');
+       &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: radial-gradient(
+            closest-side,
+            rgba(23, 26, 28, 0) 50.276243686676025%,
+            rgba(23, 26, 28, 0) 50.286245346069336%,
+            rgba(4, 5, 5, 0.82) 58.72228145599365%,
+            rgba(5, 5, 6, 0.79) 80.07731437683105%,
+            rgba(0, 0, 0, 1) 87.89013028144836%
+          );
+          opacity: 0.40;
+         }
+
+
+    &__wrapper{
+        display: flex;
+        position: relative;
+        justify-content: flex-end; 
+       
+    }
+   
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+       
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 96px;
+        line-height: 114px;
+        @extend %sf-semibold;
+        margin-bottom: 25px;
+    }
+    &__text{
+        margin: 25px 0 35px;
+        max-width: 325px;
+    }
+    &__social-item{
+        display: inline-block;
+        margin: 0 25px;
+    }
+    &__social-link{
+        opacity: 0.5;
+        transition: all .3s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+@import "media";
