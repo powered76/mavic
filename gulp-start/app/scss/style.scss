@@ -330,7 +330,7 @@
     &__box-1::before {
         background-image: url('../images/pointer-1.svg');
         width: 232px;
-        height: 117px;
+        height: 116px;
         top: 13px;
         left: 193px;
     }
@@ -384,6 +384,17 @@
     &__item {
         background: rgba(0, 0, 0, 0.3);
         max-width: 690px;
+        position: relative;
+
+        &:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            width: 319px;
+            height: 125px;
+            top: -33px;
+            right: -386px;
+            background-image: url('../images/questions-bg.png');
+        }
     }
 
     &__item-title {
@@ -391,10 +402,12 @@
         line-height: 28px;
         @extend %ub-medium;
         color: rgba(#fff, .8);
-        padding: 20px 10px 24px 40px;
+        padding: 20px 10px 20px 40px;
         position: relative;
         cursor: pointer;
-        &::after{
+        margin-bottom: 4px;
+
+        &::after {
             content: url('../images/question-arrow.svg');
             position: absolute;
             width: 72px;
@@ -412,16 +425,117 @@
     &__item-text {
         font-size: 15px;
         line-height: 22px;
-        padding: 0 5px 75px 50px; 
-        margin: 0;  
-        display: none   
+        padding: 0 5px 75px 50px;
+        margin: 0 0 4px;
+        display: none;
     }
-    &__item.questions__item--active{
-       &__item-text{ 
-        display: block;}
+
+    &__item.questions__item--active {
+        .questions__item-title::after {
+            transform: rotate(180deg);
+        }
+
+        .questions__item-text {
+            display: block;
+
+        }
     }
 }
 
+.contacts {
+    &__inner {
+        display: flex;
+        padding-left: 50px;
+    }
+
+    &__info {
+        width: 240px;
+        margin-right: 60px;
+    }
+
+    &__info-box {
+        margin-bottom: 30px;
+    }
+
+    &__info-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ub-bold;
+        margin: 0 0 13px;
+    }
+
+    &__info-phone,
+    &__info-email {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    &__info-email:hover {
+        text-decoration: underline;
+    }
+
+    &__form {
+        width: 570px;
+        margin-right: 106px;
+    }
+
+    &__form-title {
+        line-height: 24px;
+        font-size: 21px;
+        @extend %ub-bold;
+        margin-bottom: 13px;
+    }
+
+    &__form-text {
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0 0 12px;
+    }
+
+    &__form-line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__form-textarea,
+    &__form-input{
+        border: none;
+        @extend %ub-regular;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFF;
+        &::placeholder{
+            color: rgba(#fff, .4);
+        }
+    }
+ 
+    &__form-input {
+        width: 49%;
+    }
+
+    &__form-textarea {
+        min-height: 144px;
+        width: 100%;
+        resize: none;
+        margin-bottom: 20px;
+    }
+
+    &__form-btn {
+        text-transform: uppercase;
+        @extend %ub-bold;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        padding: 9px 15px;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+}
 
 
 @import "media";
