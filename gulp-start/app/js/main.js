@@ -12,6 +12,10 @@ $('.questions__item-title').on('click', function(){
 
 })
 
-
+$('#fullpage').fullpage({
+  autoScrolling:true,
+  scrollHorizontally: true,
+  sectionSelector: '.page-section',
+});
 
 });
