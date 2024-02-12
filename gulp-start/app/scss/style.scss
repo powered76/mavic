@@ -58,13 +58,14 @@
     &__list-phone{
         display: none;
     }
+    &__btn{
+        display: none;
+    }
 }
 
 .top {
     background-image: url('../images/top-bg.jpg');
-
-
-
+    
 
     &__inner {
         display: flex;
