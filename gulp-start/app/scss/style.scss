@@ -10,6 +10,7 @@
     right: 0;
     z-index: 10;
 
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -45,6 +46,9 @@
         line-height: 18px;
         @extend %ub-bold;
     }
+}
+.logo_img{
+    margin-left: 11px;
 }
 
 .menu {
@@ -307,7 +311,7 @@
         margin-right: -15px;
     }
 
-    &__item {}
+   
 
     &__box {
         max-width: 280px;
@@ -572,6 +576,8 @@
     }
     
 }
+
+
 
 
 @import "media";
